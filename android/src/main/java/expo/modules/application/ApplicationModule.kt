@@ -121,6 +121,7 @@ class ApplicationModule(private val mContext: Context) : ExportedModule(mContext
       }
     })
      */
+    promise.reject("ERR_APPLICATION_INSTALL_REFERRER_SERVICE_DISCONNECTED", "Connection to install referrer service was lost.")
   }
 
   companion object {
