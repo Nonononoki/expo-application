@@ -9,8 +9,8 @@ import android.os.RemoteException
 import android.provider.Settings
 import android.util.Log
 
-import com.android.installreferrer.api.InstallReferrerClient
-import com.android.installreferrer.api.InstallReferrerStateListener
+//import com.android.installreferrer.api.InstallReferrerClient
+//import com.android.installreferrer.api.InstallReferrerStateListener
 
 import expo.modules.core.ExportedModule
 import expo.modules.core.ModuleRegistry
@@ -90,6 +90,7 @@ class ApplicationModule(private val mContext: Context) : ExportedModule(mContext
 
   @ExpoMethod
   fun getInstallReferrerAsync(promise: Promise) {
+    /*
     val installReferrer = StringBuilder()
     val referrerClient = InstallReferrerClient.newBuilder(mContext).build()
     referrerClient.startConnection(object : InstallReferrerStateListener {
@@ -119,6 +120,7 @@ class ApplicationModule(private val mContext: Context) : ExportedModule(mContext
         promise.reject("ERR_APPLICATION_INSTALL_REFERRER_SERVICE_DISCONNECTED", "Connection to install referrer service was lost.")
       }
     })
+     */
   }
 
   companion object {
